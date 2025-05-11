@@ -8,6 +8,7 @@ use App\Http\Controllers\API\PostController;
 use App\Http\Controllers\API\CommentController;
 use App\Http\Controllers\API\ReplyController;
 use App\Http\Controllers\API\UserController;
+
 Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');

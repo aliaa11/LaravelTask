@@ -16,10 +16,6 @@ class ReplyResource extends JsonResource
     {
         return [
             'Content' => $this->message_prompt,
-            'user' => [
-                'id' => $this->user->id,
-                'name' => $this->user->name,
-            ],
             'user' => new UserResource($this->user),
             'created_at' => $this->created_at,
         ];
